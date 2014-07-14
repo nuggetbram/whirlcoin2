@@ -39,15 +39,15 @@ map<uint256, CBlockIndex*> mapBlockIndex;
 
 //---genesis blocks -------------------------------------------------------------------------------------
 uint256 hashGenesisBlock("0x");
-uint256 hashGenesisBlockTestNet("0x000004e6b42baa620b53da2fd8286d16910bdf7876e124c87e66c4388f6330e3");
+uint256 hashGenesisBlockTestNet("0x00000ea3b70ad0fb56d47cc4cf7364c0efd23b00c7a9b7b2865c1740e0138dd9");
 //-------------------------------------------------------------------------------------------------------
 uint256 MainHashMerkleRoot("0x7a2359e626f172775f11b9cd19cae8faaff6e077c895dde2578e569a0684fdc0");
 //--time blocks ---------------------------------------
 static const unsigned int timeGenesisBlock =1405306640;
-static const unsigned int timeGenesisBlockTestNet =1405306640;
+static const unsigned int timeGenesisBlockTestNet =1405306700;
 //-------nNonce -------------------------------------
 static const unsigned int nNonceGenesis=0;
-static const unsigned int nNonceGenesisTestNet=4743134;
+static const unsigned int nNonceGenesisTestNet=2352616;
 //----------------------------------------------------
 
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20);
