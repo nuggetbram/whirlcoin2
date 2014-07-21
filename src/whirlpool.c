@@ -51,6 +51,10 @@
 
 #include "sph_whirlpool.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 #if SPH_64
 
 #if SPH_SMALL_FOOTPRINT && !defined SPH_SMALL_FOOTPRINT_WHIRLPOOL
@@ -3472,5 +3476,9 @@ sph_ ## name ## _close(void *cc, void *dst) \
 MAKE_CLOSE(whirlpool)
 MAKE_CLOSE(whirlpool0)
 MAKE_CLOSE(whirlpool1)
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

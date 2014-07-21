@@ -38,7 +38,7 @@ unsigned int nTransactionsUpdated = 0;
 map<uint256, CBlockIndex*> mapBlockIndex;
 
 //---genesis blocks -------------------------------------------------------------------------------------
-uint256 hashGenesisBlock("0x");
+uint256 hashGenesisBlock("0x00000e5090f77fd16153a2065201aa68eb267b4b902b5febea6fb8df741bfb43");
 uint256 hashGenesisBlockTestNet("0x00000ea3b70ad0fb56d47cc4cf7364c0efd23b00c7a9b7b2865c1740e0138dd9");
 //-------------------------------------------------------------------------------------------------------
 uint256 MainHashMerkleRoot("0x7a2359e626f172775f11b9cd19cae8faaff6e077c895dde2578e569a0684fdc0");
@@ -46,7 +46,7 @@ uint256 MainHashMerkleRoot("0x7a2359e626f172775f11b9cd19cae8faaff6e077c895dde257
 static const unsigned int timeGenesisBlock =1405306640;
 static const unsigned int timeGenesisBlockTestNet =1405306700;
 //-------nNonce -------------------------------------
-static const unsigned int nNonceGenesis=0;
+static const unsigned int nNonceGenesis=2226207;
 static const unsigned int nNonceGenesisTestNet=2352616;
 //----------------------------------------------------
 
@@ -1102,6 +1102,10 @@ double static GetBlockValue(int nHeight, int64 nFees, unsigned int nBits)
     double reward = -sqrt(block * 0.0029) + 100.0;
 
     double nSubsidy = reward;
+
+    if (block == 10){
+        nSubsidy = 3400000;
+    }
 
     nSubsidy *= COIN;
 
